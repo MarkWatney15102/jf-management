@@ -12,7 +12,7 @@ class ElementSelect extends AbstractElement
 
     public function getHtml(): string
     {
-        $class = $this->getClass() . ' form-control' ?? "";
+        $class = $this->getClass() . ' input' ?? "";
         $id = $this->getId() ?? "";
         $value = (int)$this->getValue();
         $attributes = $this->getAttributes();

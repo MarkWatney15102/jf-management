@@ -8,7 +8,7 @@ class ElementCheckbox extends AbstractElement
 {
     public function getHtml(): string
     {
-        $class = $this->getClass() . " form-check-input" ?? "";
+        $class = $this->getClass() . " checkbox" ?? "";
         $id = $this->getId() ?? "";
         $checked = ((int)$this->getValue() > 0) ? 'checked' : '';
         $attributes = $this->getAttributes();

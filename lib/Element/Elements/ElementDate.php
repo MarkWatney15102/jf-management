@@ -12,7 +12,7 @@ class ElementDate extends AbstractElement
 {
     public function getHtml(): string
     {
-        $class = $this->getClass() . ' form-control' ?? "";
+        $class = $this->getClass() . ' input' ?? "";
         $id = $this->getId() ?? "";
         $value = $this->getValue();
         $attributes = $this->getAttributes();

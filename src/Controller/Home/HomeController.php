@@ -12,6 +12,13 @@ use src\PDF\Documentation;
 
 class HomeController extends AbstractController
 {
+    public function dashboardAction(): void
+    {
+        $this->render('layout/dashboard', [
+            'renderWithBasicBody' => true,
+        ]);
+    }
+
     public function homeAction(): void
     {
         if (isset($_GET['PDF'])) {

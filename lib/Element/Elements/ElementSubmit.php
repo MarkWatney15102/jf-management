@@ -10,7 +10,7 @@ class ElementSubmit extends AbstractElement
 {
     public function getHtml(): string
     {
-        $class = "btn btn-outline-primary" . $this->getClass() ?? "";
+        $class = "button " . $this->getClass() ?? "";
         $id = $this->getId() ?? "";
         $label = $this->getLabel();
 

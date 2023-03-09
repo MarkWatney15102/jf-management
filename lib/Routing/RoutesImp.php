@@ -59,13 +59,29 @@ class RoutesImp
         $this->routes[] = new Route(
             '/home',
             HomeController::class,
+            'dashboardAction',
+            RouteMethod::GET,
+            Level::ADMIN->getLevel(),
+            true
+        );
+        $this->routes[] = new Route(
+            '/',
+            HomeController::class,
+            'dashboardAction',
+            RouteMethod::GET,
+            Level::ADMIN->getLevel(),
+            true
+        );
+        $this->routes[] = new Route(
+            '/diensterfassung',
+            HomeController::class,
             'homeAction',
             RouteMethod::GET,
             Level::ADMIN->getLevel(),
             true
         );
         $this->routes[] = new Route(
-            '/home',
+            '/diensterfassung',
             HomeController::class,
             'homeFormAction',
             RouteMethod::POST,

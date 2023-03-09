@@ -28,7 +28,7 @@ abstract class AbstractElement
 
     public function label(): string
     {
-        return "<label for='{$this->getId()}'>{$this->label}</label>";
+        return "<label class='label' for='{$this->getId()}'>{$this->label}</label>";
     }
 
     public function getLabel(): string
