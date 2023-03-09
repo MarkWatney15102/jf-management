@@ -1,0 +1,15 @@
+{
+  "table": "member",
+  "primaryKey": "ID",
+  "fields": [
+    {
+      "name": "firstname"
+    },
+    {
+      "name": "lastname"
+    },
+    {
+      "name": "position"
+    }
+  ]
+}

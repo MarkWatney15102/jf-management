@@ -1,0 +1,18 @@
+{
+    "table": "user",
+    "primaryKey": "ID",
+    "fields": [
+        {
+            "name": "mail"
+        },
+        {
+            "name": "username"
+        },
+        {
+            "name": "level"
+        },
+        {
+            "name": "password"
+        }
+    ]
+}
