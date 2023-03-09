@@ -1,7 +1,7 @@
 {
-    "version": "0.2.0",
-    "description": "Auftragssystem",
-    "name": "eikewientjes/auftragssystem",
+    "version": "1.0.0",
+    "description": "jf-manager",
+    "name": "eikewientjes/jf-manager",
     "autoload": {
         "classmap": [
             "src",
