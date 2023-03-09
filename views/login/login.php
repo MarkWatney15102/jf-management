@@ -9,7 +9,6 @@
                 <?= $this->form->getElement('password')->getHtml() ?>
                 <br>
                 <?= $this->form->getElement('login')->getHtml() ?>
-                <a href="/register" target="_blank" class="btn btn-outline-primary" style="float: right;">Registrieren</a>
                 <?= $this->form->close() ?>
             </div>
         </div>

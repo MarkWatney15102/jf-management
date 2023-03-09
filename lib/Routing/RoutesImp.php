@@ -17,6 +17,22 @@ class RoutesImp
     public function __construct()
     {
         $this->routes[] = new Route(
+            '/',
+            LoginController::class,
+            'login',
+            RouteMethod::GET,
+            Level::NO_LEVEL->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
+            '/',
+            LoginController::class,
+            'tryLogin',
+            RouteMethod::POST,
+            Level::NO_LEVEL->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
             '/login',
             LoginController::class,
             'login',
@@ -29,6 +45,14 @@ class RoutesImp
             LoginController::class,
             'tryLogin',
             RouteMethod::POST,
+            Level::NO_LEVEL->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
+            '/logout',
+            LoginController::class,
+            'logoutAction',
+            RouteMethod::GET,
             Level::NO_LEVEL->getLevel(),
             false
         );

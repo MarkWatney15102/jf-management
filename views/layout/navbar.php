@@ -13,7 +13,7 @@ use src\Helper\User\UserHelper;
         <li>
             <a href="/home" class="nav-link text-white">
                 <img src="/images/icons/dashboard.svg" alt="Dashboard" class="navbar-icon">
-                Home
+                Diensterfassungsblatt
             </a>
         </li>
     </ul>

@@ -6,9 +6,6 @@
       "name": "firstname"
     },
     {
-      "name": "lastname"
-    },
-    {
       "name": "position"
     }
   ]

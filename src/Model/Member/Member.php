@@ -7,7 +7,6 @@ use lib\Model\AbstractEntity;
 class Member extends AbstractEntity
 {
     protected string $firstname = "";
-    protected string $lastname = "";
     protected int $position = 0;
 
     /**
@@ -25,23 +24,6 @@ class Member extends AbstractEntity
     {
         $this->firstname = $firstname;
     }
-
-    /**
-     * @return string
-     */
-    public function getLastname(): string
-    {
-        return $this->lastname;
-    }
-
-    /**
-     * @param string $lastname
-     */
-    public function setLastname(string $lastname): void
-    {
-        $this->lastname = $lastname;
-    }
-
     /**
      * @return int
      */

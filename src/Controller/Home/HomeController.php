@@ -20,11 +20,13 @@ class HomeController extends AbstractController
             $pdf->outputPdf();
         }
 
-        $members = MemberContainer::getInstance()->findBy();
+        $members = MemberContainer::getInstance()->findBy(['position' => 1]);
+        $betreuer = MemberContainer::getInstance()->findBy(['position' => 2]);
 
         $this->render('home/home', [
             'renderWithBasicBody' => true,
-            'members' => $members
+            'members' => $members,
+            'betreuer' => $betreuer
         ]);
     }
 
@@ -41,7 +43,6 @@ class HomeController extends AbstractController
         if (isset($_POST['addMember'])) {
             $member = new Member();
             $member->setFirstname(HTML::cleanString($_POST['firstname']));
-            $member->setLastname(HTML::cleanString($_POST['lastname']));
             $member->setPosition((int)$_POST['position']);
 
             MemberMapper::getInstance()->create($member);
