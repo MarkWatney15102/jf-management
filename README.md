@@ -1,12 +1,7 @@
-# Auftragssystem
-### Version: dev-0.1.0
+# JF-Manager
+### Version: 1.0.0
 
 # Installation
-
-
-```bash
-php installer.php
-```
 
 # Was muss beim Aufsetzten des Systems gemacht werden
 1. .env Datei erstellen mit Datenbank Verbindung
