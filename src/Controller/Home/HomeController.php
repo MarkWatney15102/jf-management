@@ -55,6 +55,6 @@ class HomeController extends AbstractController
             MemberMapper::getInstance()->create($member);
         }
 
-        Redirect::to('/home');
+        Redirect::to('/diensterfassung');
     }
 }

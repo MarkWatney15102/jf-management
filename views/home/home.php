@@ -13,7 +13,7 @@ $betreuer = $this->betreuer;
         <div class="box">
             <h3 class="title is-3">JF Mitglied hinzufügen</h3>
             <div class="box-body">
-                <form action="/home" method="post">
+                <form action="/diensterfassung" method="post">
                     <input type="hidden" name="position" value="1">
                     <div class="field">
                         <label for="firstname">Vorname</label>
@@ -29,7 +29,7 @@ $betreuer = $this->betreuer;
         <div class="box">
             <h3 class="title is-3">Betreuer hinzufügen</h3>
             <div class="box-body">
-                <form action="/home" method="post">
+                <form action="/diensterfassung" method="post">
                     <input type="hidden" name="position" value="2">
                     <div class="field">
                         <label for="firstname">Vorname</label>
