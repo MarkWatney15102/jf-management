@@ -1,3 +1,9 @@
+<?php
+use lib\Message\MessageGroup;
+
+$messageGroup = MessageGroup::getInstance();
+echo $messageGroup->printMessages();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +23,8 @@
                         JF-Manager
                     </h3>
                     <div class="box-body">
-                        <?php use lib\Message\MessageGroup;
-
+                        <?php
                         require $_SERVER['DOCUMENT_ROOT'] . '/views/layout/navbar.php';
-                        $messageGroup = MessageGroup::getInstance();
-                        echo $messageGroup->printMessages();
                         ?>
                     </div>
                 </div>

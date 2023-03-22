@@ -61,7 +61,7 @@ $betreuer = $this->betreuer;
                         <tr>
                             <td><?= $member->getFirstname() ?></td>
                             <td>
-                                <form action="/home" method="post">
+                                <form action="/diensterfassung" method="post">
                                     <input type="hidden" name="member" value="<?= $member->getID() ?>">
                                     <input type="submit" value="Löschen" class="button is-danger"
                                            name="deleteMember">
@@ -90,7 +90,7 @@ $betreuer = $this->betreuer;
                         <tr>
                             <td><?= $member->getFirstname() ?></td>
                             <td>
-                                <form action="/home" method="post">
+                                <form action="/diensterfassung" method="post">
                                     <input type="hidden" name="member" value="<?= $member->getID() ?>">
                                     <input type="submit" value="Löschen" class="button is-danger"
                                            name="deleteMember">

@@ -9,7 +9,7 @@ class Success extends AbstractMessage
     public function getHtml(): string
     {
         return <<<HTML
-            <div class="alert alert-success notification" role="alert">
+            <div class="alert notification is-success" role="alert">
                 <b>{$this->getTitle()}</b>
                 <br>
                 {$this->getMessage()}

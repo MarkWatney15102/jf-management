@@ -9,7 +9,7 @@ class Warning extends AbstractMessage
     public function getHtml(): string
     {
         return <<<HTML
-            <div class="alert alert-warning notification" role="alert">
+            <div class="alert notification is-warning" role="alert">
                 <b>{$this->getTitle()}</b>
                 <br>
                 {$this->getMessage()}

@@ -57,6 +57,14 @@ class RoutesImp
             false
         );
         $this->routes[] = new Route(
+            '/logout',
+            LoginController::class,
+            'logoutAction',
+            RouteMethod::GET,
+            Level::NO_LEVEL->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
             '/home',
             HomeController::class,
             'dashboardAction',
