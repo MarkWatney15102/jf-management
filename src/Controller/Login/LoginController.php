@@ -34,15 +34,20 @@ class LoginController extends AbstractController
         $user = UserContainer::getInstance()?->findOne(['username' => $username]);
 
         if ($user instanceof User) {
-            $passwordHash = $user->getPassword();
+            if ($user->getLevel() > 0) {
+                $passwordHash = $user->getPassword();
 
-            if ($auth->isPasswordValid($passwordHash, $passwordInput)) {
-                $auth->setUidCookie($user->getID());
+                if ($auth->isPasswordValid($passwordHash, $passwordInput)) {
+                    $auth->setUidCookie($user->getID());
 
-                MessageGroup::getInstance()?->addMessage(Message::SUCCESS, 'Login erfolgreich', 'Der Login in das System war erfolgreich');
-                Redirect::to('/home');
+                    MessageGroup::getInstance()?->addMessage(Message::SUCCESS, 'Login erfolgreich', 'Der Login in das System war erfolgreich');
+                    Redirect::to('/home');
+                } else {
+                    MessageGroup::getInstance()?->addMessage(Message::ERROR, 'Login fehlgeschlagen', 'Der Login in das System ist fehlgeschlagen');
+                    Redirect::to('/login');
+                }
             } else {
-                MessageGroup::getInstance()?->addMessage(Message::ERROR, 'Login fehlgeschlagen', 'Der Login in das System ist fehlgeschlagen');
+                MessageGroup::getInstance()?->addMessage(Message::ERROR, 'Login fehlgeschlagen', 'Benutzer ist noch nicht aktiv');
                 Redirect::to('/login');
             }
         } else {

@@ -5,8 +5,8 @@ namespace lib\Message;
 abstract class AbstractMessage
 {
     private string $id;
-    private string $title;
-    private string $message;
+    private string $title = "";
+    private string $message = "";
 
     /**
      * @return string

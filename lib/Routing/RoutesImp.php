@@ -4,8 +4,10 @@ declare(strict_types=1);
 namespace lib\Routing;
 
 use lib\Auth\Level;
+use src\Controller\Admin\UserController;
 use src\Controller\Home\HomeController;
 use src\Controller\Login\LoginController;
+use src\Controller\Login\RegisterController;
 
 class RoutesImp
 {
@@ -49,6 +51,38 @@ class RoutesImp
             false
         );
         $this->routes[] = new Route(
+            '/register',
+            RegisterController::class,
+            'registerAction',
+            RouteMethod::GET,
+            Level::NO_LEVEL->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
+            '/register',
+            RegisterController::class,
+            'tryRegisterAction',
+            RouteMethod::POST,
+            Level::NO_LEVEL->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
+            '/admin/users',
+            UserController::class,
+            'listUsersAction',
+            RouteMethod::GET,
+            Level::ADMIN->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
+            '/admin/user/level/(\d+)/(\d+)',
+            UserController::class,
+            'changeUserLevelAction',
+            RouteMethod::GET,
+            Level::ADMIN->getLevel(),
+            false
+        );
+        $this->routes[] = new Route(
             '/logout',
             LoginController::class,
             'logoutAction',
@@ -69,7 +103,7 @@ class RoutesImp
             HomeController::class,
             'dashboardAction',
             RouteMethod::GET,
-            Level::ADMIN->getLevel(),
+            Level::USER->getLevel(),
             true
         );
         $this->routes[] = new Route(
@@ -77,7 +111,7 @@ class RoutesImp
             HomeController::class,
             'dashboardAction',
             RouteMethod::GET,
-            Level::ADMIN->getLevel(),
+            Level::USER->getLevel(),
             true
         );
         $this->routes[] = new Route(
@@ -85,7 +119,7 @@ class RoutesImp
             HomeController::class,
             'homeAction',
             RouteMethod::GET,
-            Level::ADMIN->getLevel(),
+            Level::USER->getLevel(),
             true
         );
         $this->routes[] = new Route(
@@ -93,7 +127,7 @@ class RoutesImp
             HomeController::class,
             'homeFormAction',
             RouteMethod::POST,
-            Level::ADMIN->getLevel(),
+            Level::USER->getLevel(),
             true
         );
     }
